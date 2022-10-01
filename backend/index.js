@@ -5,7 +5,7 @@ const dotenv = require("dotenv");
 const app = express();
 const userRoute = require("./routes/users.js")
 const pinRoute = require("./routes/pins.js")
-
+const locationRoute = require("./routes/locations.js")
 
 //configuring dotenv
 dotenv.config();
@@ -22,6 +22,8 @@ mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true, useUnifiedTopolo
 app.use("/user", userRoute)
 //connecting to pins
 app.use("/pins", pinRoute)
+//connecting to locations
+app.use("/locations", locationRoute)
 
 //creating app
 app.listen(5500, () => {

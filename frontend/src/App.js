@@ -48,7 +48,6 @@ function App() {
         style={{
           color:"slateblue",
           cursor: "pointer",
-          scale: "2"
          }}
       />
     </Marker>

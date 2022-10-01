@@ -5,6 +5,7 @@ const dotenv = require("dotenv");
 const app = express();
 const userRoute = require("./routes/users.js")
 const pinRoute = require("./routes/pins.js")
+const petRoute = require("./routes/pets.js")
 
 
 //configuring dotenv
@@ -23,7 +24,7 @@ app.use("/api/user", userRoute)
 //connecting to pins
 app.use("/api/pins", pinRoute)
 // connecting to pets
-// app.use("/api/pets", petRoute)
+app.use("/api/pets", petRoute)
 
 //creating app
 app.listen(5500, () => {

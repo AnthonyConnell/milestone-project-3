@@ -1,6 +1,6 @@
 //Dependencies
 const router = require("express").Router();
-const Pin = require("../models/Pins.js");
+const Pin = require("../models/pin.js");
 
 //create pin code
 router.post("/", async (req, res) => {

@@ -23,10 +23,9 @@ mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true, useUnifiedTopolo
 //connecting to users
 app.use("/user", userRoute)
 //connecting to pins
-app.use("/api/pets", petRoute)
 app.use("/pins", pinRoute)
 // connecting to pets
-app.use("/api/pets", petRoute)
+app.use("/pets", petRoute)
 //connecting to locations
 app.use("/locations", locationRoute)
 //connecting to review

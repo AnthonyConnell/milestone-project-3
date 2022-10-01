@@ -13,7 +13,8 @@ router.post("/newreview", async (req, res) => {
 
         //save review
         const review = await newReview.save();
-
+        
+        //send response
         res.status(200).json(review._id);
 
     } catch (err) {

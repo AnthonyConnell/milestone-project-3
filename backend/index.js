@@ -19,9 +19,9 @@ mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true, useUnifiedTopolo
 }).catch((err) => console.log(err));
 
 //connecting to users
-app.use("/api/user", userRoute)
+app.use("/user", userRoute)
 //connecting to pins
-app.use("/api/pins", pinRoute)
+app.use("/pins", pinRoute)
 
 //creating app
 app.listen(5500, () => {

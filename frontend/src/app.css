@@ -1,0 +1,15 @@
+.card {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+
+label {
+    width: max-content;
+    color: black;
+    font-size: 15px;
+    border-bottom: .5px solid black;
+    margin: 3px 0;
+}

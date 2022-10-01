@@ -17,8 +17,8 @@ router.post("/newlocation", async (req, res) => {
         //save location
         const location = await newLocation.save();
 
+        //send response
         res.status(200).json(location._id);
-
     } catch (err) {
         res.status(500).json(err);
     }

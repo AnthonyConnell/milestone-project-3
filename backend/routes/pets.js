@@ -1,9 +1,9 @@
 const router = require("express").Router();
 const Pet = require("../models/pet.js");
 
-router.post("/pets/new", async (req, res) => {
+router.post("/newpet", async (req, res) => {
     try {
-        // create a new review
+        // create a new pet
         const newPet = new Pet({
             petName: req.body.petName,
             breed: req.body.breed,
@@ -11,19 +11,20 @@ router.post("/pets/new", async (req, res) => {
             photo: req.body.photo
         })
 
-        // save Pet
+        // save pet
         const pet = await newPet.save();
 
+        //send response
         res.status(200).json(pet._id);
     } catch (err) {
         res.status(500).json(err);
     }
 })
 
-//access review
+//access pet
 router.post("/pet", async (req, res) => {
     try {
-      //find review
+      //find pet
       const pet = await Pet.findOne({pet: req.body.pet});
       !pet && res.status(400).json("No Pet Found");
     

@@ -1,7 +1,7 @@
 const Location = require("../models/locations.js");
 const router = require("express").Router();
 
-//register
+//new location
 router.post("/newlocation", async (req, res) => {
     try {
         //create new location

@@ -4,12 +4,57 @@
     display: flex;
     flex-direction: column;
     justify-content: space-around;
-}
-
-label {
+  }
+  
+  label {
     width: max-content;
-    color: black;
-    font-size: 15px;
-    border-bottom: .5px solid black;
+    color: tomato;
+    font-size: 13px;
+    border-bottom: 0.5px solid tomato;
     margin: 3px 0;
-}
+  }
+  
+  .desc {
+    font-size: 14px;
+  }
+  
+  .star {
+    color: gold;
+  }
+  
+  .username {
+    font-size: 14px;
+  }
+  
+  .date {
+    font-size: 12px;
+  }
+  
+  form {
+    width: 250px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: rgb(88, 87, 87);
+  }
+
+  input {
+    border: none;
+    border-bottom: 1px solid gray;
+  }
+
+  input::placeholder,
+  textarea::placeholder {
+    font-size: 12px;
+    color: rgb(185, 184, 184);
+  }
+
+  .submitButton {
+    border: none;
+    padding: 5px;
+    border-radius: 5px;
+    color: white;
+    background-color: tomato;
+    cursor: pointer;
+  }

@@ -1,6 +1,18 @@
 const Location = require("../models/locations.js");
 const router = require("express").Router();
 
+//location
+router.get("/", async (req, res) => {
+    try {
+        const location = await Location.find();
+  
+        //send response
+        res.status(200).json(location)
+    } catch (err) {
+        res.status(500).json(err)
+    }
+  });
+
 //new location
 router.post("/newlocation", async (req, res) => {
     try {
@@ -23,17 +35,5 @@ router.post("/newlocation", async (req, res) => {
         res.status(500).json(err);
     }
 });
-
-//location
-router.get("/", async (req, res) => {
-  try {
-      const location = await Location.find();
-
-      //send response
-      res.status(200).json(location)
-  } catch (err) {
-      res.status(500).json(err)
-  }
-})
 
 module.exports = router

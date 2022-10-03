@@ -1,6 +1,20 @@
 const Review = require("../models/review.js");
 const router = require("express").Router();
 
+//access review
+router.get("/", async (req, res) => {
+  try {
+    //find review
+    const review = await Review.findOne({review: req.body.review});
+    !review && res.status(400).json("No Review Found");
+  
+    //send response
+    res.status(200).json({_id: review._id, review: review});
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 //new review
 router.post("/newreview", async (req, res) => {
     try {
@@ -21,19 +35,5 @@ router.post("/newreview", async (req, res) => {
         res.status(500).json(err);
     }
 });
-
-//access review
-router.get("/review", async (req, res) => {
-    try {
-      //find review
-      const review = await Review.findOne({review: req.body.review});
-      !review && res.status(400).json("No Review Found");
-    
-      //send response
-      res.status(200).json({_id: review._id, review: review});
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
 
 module.exports = router

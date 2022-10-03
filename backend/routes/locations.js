@@ -25,9 +25,9 @@ router.post("/newlocation", async (req, res) => {
 });
 
 //location
-router.post("/location", async (req, res) => {
+router.get("/location", async (req, res) => {
     try {
-      //find location
+      //find location 
       const location = await Location.findOne({location: req.body.location});
       !location && res.status(400).json("Invalid Location");
     

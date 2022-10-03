@@ -22,7 +22,7 @@ router.post("/newpet", async (req, res) => {
 })
 
 //access pet
-router.post("/pet", async (req, res) => {
+router.get("/pet", async (req, res) => {
     try {
       //find pet
       const pet = await Pet.findOne({pet: req.body.pet});

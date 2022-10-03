@@ -23,7 +23,7 @@ router.post("/newreview", async (req, res) => {
 });
 
 //access review
-router.post("/review", async (req, res) => {
+router.get("/review", async (req, res) => {
     try {
       //find review
       const review = await Review.findOne({review: req.body.review});

@@ -25,17 +25,15 @@ router.post("/newlocation", async (req, res) => {
 });
 
 //location
-router.get("/location", async (req, res) => {
-    try {
-      //find location 
-      const location = await Location.findOne({location: req.body.location});
-      !location && res.status(400).json("Invalid Location");
-    
+router.get("/", async (req, res) => {
+  try {
+      const location = await Location.find();
+
       //send response
-      res.status(200).json({_id: location._id, location: location});
-    } catch (err) {
-      res.status(500).json(err);
-    }
-  });
+      res.status(200).json(location)
+  } catch (err) {
+      res.status(500).json(err)
+  }
+})
 
 module.exports = router

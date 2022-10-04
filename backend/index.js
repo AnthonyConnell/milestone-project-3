@@ -12,6 +12,7 @@ const reviewRoute = require("./routes/review.js");
 
 //configuring dotenv
 dotenv.config();
+app.use(cors());
 
 //set up post to parse
 app.use(express.json());

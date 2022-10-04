@@ -8,9 +8,11 @@ const pinRoute = require("./routes/pins.js")
 const petRoute = require("./routes/pets.js")
 const locationRoute = require("./routes/locations.js")
 const reviewRoute = require("./routes/review.js")
+const cors = require("cors")
 
 //configuring dotenv
 dotenv.config();
+app.use(cors());
 
 //set up post to parse
 app.use(express.json());

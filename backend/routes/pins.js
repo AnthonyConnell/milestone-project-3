@@ -23,6 +23,7 @@ router.post("/", async (req, res) => {
         //send response
         res.status(200).json(savedPin)
     } catch (err) {
+        console.log(err)
         res.status(500).json(err)
     }
 });

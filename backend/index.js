@@ -5,6 +5,7 @@ const dotenv = require("dotenv");
 const app = express();
 const userRoute = require("./routes/users.js")
 const pinRoute = require("./routes/pins.js")
+const petRoute = require("./routes/pets.js")
 const locationRoute = require("./routes/locations.js")
 const reviewRoute = require("./routes/review.js")
 const cors = require("cors")
@@ -25,6 +26,8 @@ mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true, useUnifiedTopolo
 app.use("/user", userRoute)
 //connecting to pins
 app.use("/pins", pinRoute)
+// connecting to pets
+app.use("/pets", petRoute)
 //connecting to locations
 app.use("/locations", locationRoute)
 //connecting to review

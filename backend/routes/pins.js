@@ -19,6 +19,7 @@ router.get("/", async (req, res) => {
         const pins = await Pin.find();
         res.status(200).json(pins)
     } catch (err) {
+        console.log(err)
         res.status(500).json(err)
     }
 })

@@ -30,10 +30,10 @@ router.get("/", async (req, res) => {
       const location = await Location.find();
 
       //send response
-      res.status(200).json(location)
+      res.status(200).json(location);
   } catch (err) {
-      res.status(500).json(err)
+      res.status(500).json(err);
   }
-})
+});
 
 module.exports = router

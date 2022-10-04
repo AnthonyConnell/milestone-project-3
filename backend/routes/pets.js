@@ -9,7 +9,7 @@ router.post("/newpet", async (req, res) => {
             breed: req.body.breed,
             petAge: req.body.petAge,
             photo: req.body.photo
-        })
+        });
 
         // save pet
         const pet = await newPet.save();
@@ -19,7 +19,7 @@ router.post("/newpet", async (req, res) => {
     } catch (err) {
         res.status(500).json(err);
     }
-})
+});
 
 //access pet
 router.get("/pet", async (req, res) => {
@@ -34,5 +34,17 @@ router.get("/pet", async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+//delete pet
+router.delete("/delete/:id", async (req, res) => {
+  try {
+    const deletePet = await Pet.deleteOne({_id: Pet._id});
+
+    res.status(200).json(`Successfully deleted ${deletePet}`);
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 
   module.exports = router

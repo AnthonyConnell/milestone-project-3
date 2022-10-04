@@ -19,7 +19,7 @@ router.post("/register", async (req, res) => {
             address: req.body.address,
             city: req.body.city,
             State: req.body.state
-        })
+        });
 
         //save user
         const user = await newUser.save();
@@ -51,5 +51,18 @@ router.post("/login", async (req, res) => {
       res.status(500).json(err);
     }
   });
+
+router.get("/:User_id", async (req, res) => {
+    try {
+      const foundUser = await User.findOne({
+        where: {user_id: req.params.user_id}
+      });
+
+      //send response
+      res.status(200).json(foundUser);
+    } catch (err) {
+      res.status(500).json(err);
+    }
+});
 
 module.exports = router

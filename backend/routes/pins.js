@@ -21,11 +21,11 @@ router.get("/", async (req, res) => {
         const pins = await Pin.find();
 
         //send response
-        res.status(200).json(pins)
+        res.status(200).json(pins);
     } catch (err) {
-        res.status(500).json(err)
+        res.status(500).json(err);
     }
-})
+});
 
 //exports
 module.exports = router

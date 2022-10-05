@@ -41,21 +41,22 @@ export default function Register({setShowRegister}) {
                 DoggoPin
             </div>
             <form onSubmit={handleSubmit}>
-                <input type="text" placeholder='userName' ref={nameRef} />
+                <input type="text" placeholder='username' ref={nameRef} />
                 <input type="email" placeholder='email' ref={emailRef} />
                 <input type="password" placeholder='password' ref={passwordRef} />
                 <input type="age" placeholder='age' ref={ageRef} />
                 <input type="address" placeholder='address' ref={addressRef} />
                 <input type="city" placeholder='city' ref={cityRef} />
                 <input type="state" placeholder='state' ref={stateRef} />
-                
                 <button className="registerBtn">Register</button>
                 {success && (
                     <span className="success">Success! Logging in...</span>
                 )}
                 {error && <span className="failure">Oops! Looks like something went wrong...</span>}
             </form>
-            <Cancel className="registerCancel" onClick={() => setShowRegister(false)} />
+            <Cancel className="registerCancel" 
+            onClick={() => setShowRegister(false)} 
+            />
         </div>
     );
 }

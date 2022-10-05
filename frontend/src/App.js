@@ -64,7 +64,7 @@ function App() {
       try {
         const allPins = await axios.get("http://localhost:5500/pins");
         console.log(allPins.data);
-        // setPins(allPins.data);
+        setPins(allPins.data);
       } catch (err) {
         console.log(err);
       }
@@ -198,8 +198,13 @@ function App() {
             </button>
           </div>
         )}
-       {showRegister && <Register />}
-       {showLogin && <Login />}
+       {showRegister && <Register setShowRegister={setShowRegister} />}
+       {showLogin && (
+          <Login
+            setShowLogin={setShowLogin}
+            setCurrentUsername={setCurrentUsername}
+          />
+        )}
     </Map>
   </div>
   );

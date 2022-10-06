@@ -9,6 +9,7 @@ import Register from "./components/Register";
 import Login from "./components/Login";
 
 function App() {
+  const  myStorage = window.localStorage;
   const [pins, setPins] = useState([]);
   const [currentPlaceId, setCurrentPlaceId] = useState("");
   const [currentUsername, setCurrentUsername] = useState(null);
@@ -71,6 +72,11 @@ function App() {
     };
     getPins();
   }, []);
+
+  const handleLogout = () => {
+    setCurrentUsername(null);
+    myStorage.removeItem("user");
+  };
 
   return (
     <div style={{ height: "100vh", width: "100%" }}>
@@ -187,7 +193,9 @@ function App() {
         </>
       )}
         {currentUsername ? (
-        <button className="button logout">Logout</button>
+          <button className="button logout" onClick={handleLogout}>
+          Log out
+          </button>
         ) : ( 
           <div className="buttons">
             <button className="button login" onClick={() => setShowLogin(true)}>
@@ -203,6 +211,7 @@ function App() {
           <Login
             setShowLogin={setShowLogin}
             setCurrentUsername={setCurrentUsername}
+            myStorage={myStorage}
           />
         )}
     </Map>

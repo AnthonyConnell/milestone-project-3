@@ -3,7 +3,7 @@ import axios from "axios";
 import { useRef, useState } from "react";
 import "./login.css";
 
-export default function Login({ setShowLogin, setCurrentUsername }) {
+export default function Login({ setShowLogin, setCurrentUsername, myStorage }) {
   const [error, setError] = useState(false);
   const usernameRef = useRef();
   const passwordRef = useRef();
@@ -15,10 +15,9 @@ export default function Login({ setShowLogin, setCurrentUsername }) {
       password: passwordRef.current.value,
     };
     try {
-      const res = await axios.post("http://localhost:5500/users/login"
-, user);
+      const res = await axios.post("http://localhost:5500/users/login", user);
       setCurrentUsername(res.data.username);
-    //   myStorage.setItem('user', res.data.username);
+      myStorage.setItem('user', res.data.username);
       setShowLogin(false)
     } catch (err) {
       setError(true);
@@ -27,7 +26,7 @@ export default function Login({ setShowLogin, setCurrentUsername }) {
 
   return (
     <div className="loginContainer">
-      <div className="logo">
+      <div className="logoLogin">
         <Room className="logoIcon" />
         <span>DoggoPin</span>
       </div>

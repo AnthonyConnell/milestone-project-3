@@ -8,12 +8,15 @@ const pinRoute = require("./routes/pins.js")
 const petRoute = require("./routes/pets.js")
 const locationRoute = require("./routes/locations.js")
 const reviewRoute = require("./routes/review.js")
+const path = require("path")
 
 //configuring dotenv
 dotenv.config();
 
 //set up post to parse
 app.use(express.json());
+
+app.use(express.static(path.resolve(__dirname, '..', "frontend/build")))
 
 //connecting to mongo
 mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {

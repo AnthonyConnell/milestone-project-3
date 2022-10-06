@@ -36,7 +36,7 @@ export default function Register({setShowRegister}) {
 
     return (
         <div className="registerContainer">
-            <div className='logo'>
+            <div className='logoRegister'>
                 <Room/>
                 DoggoPin
             </div>

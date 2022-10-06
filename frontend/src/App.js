@@ -32,7 +32,7 @@ function App() {
   };
 
   const handleAddClick = (e) => {
-    const [longitude, latitude] = e.lngLat;
+    const [longitude, latitude] = e.lngLat.toArray();
     console.log(e);
     setNewPlace({
       lat: latitude,

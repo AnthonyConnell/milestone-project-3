@@ -36,4 +36,16 @@ router.post("/newlocation", async (req, res) => {
     }
 });
 
+//location
+router.get("/", async (req, res) => {
+  try {
+      const location = await Location.find();
+
+      //send response
+      res.status(200).json(location);
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
+
 module.exports = router

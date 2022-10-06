@@ -11,6 +11,7 @@ const petRoute = require("./routes/pets.js");
 const locationRoute = require("./routes/locations.js");
 const reviewRoute = require("./routes/review.js");
 const cors = require("cors");
+const path = require("path");
 
 //configuring dotenv
 dotenv.config();

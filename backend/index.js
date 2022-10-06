@@ -3,6 +3,7 @@ const express = require("express");
 const mongoose = require("mongoose");
 const dotenv = require("dotenv");
 const app = express();
+
 // const methodOverride = require("method-override");
 const userRoute = require("./routes/users.js");
 const pinRoute = require("./routes/pins.js");
@@ -18,6 +19,8 @@ app.use(cors());
 //set up post to parse
 app.use(express.json());
 // app.use(methodOverride("_method"));
+
+app.use(express.static(path.resolve(__dirname, '..', "frontend/build")))
 
 //connecting to mongo
 mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {

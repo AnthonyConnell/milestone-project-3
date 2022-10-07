@@ -173,7 +173,7 @@ function App() {
                 />
                 <label>Description</label>
                 <textarea
-                  placeholder="Say us something about this place."
+                  placeholder="Say something about this place."
                   onChange={(e) => setDesc(e.target.value)}
                 />
                 <label>Rating</label>

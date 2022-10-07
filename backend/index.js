@@ -26,6 +26,7 @@ app.use(express.static(path.resolve(__dirname, '..', "frontend/build")))
 //connecting to mongo
 mongoose.connect(process.env.MONGO_URL, {useNewUrlParser: true, useUnifiedTopology: true}).then(() => {
     console.log('connected to database')
+    console.log(`running on PORT ${process.env.PORT}`)
 }).catch((err) => console.log(err));
 
 //connecting to users
@@ -40,6 +41,6 @@ app.use("/locations", locationRoute);
 app.use("/reviews", reviewRoute);
 
 //creating app
-app.listen(5500, () => {
+app.listen(8080, () => {
     console.log('backend is running')
 });

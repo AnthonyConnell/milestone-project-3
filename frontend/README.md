@@ -1,70 +1,96 @@
-# Getting Started with Create React App
+![doggo destinations logo](/src/images/DD_Logo.png)
+# Doggo Destinations
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+---
 
-## Available Scripts
+![app demo](/src/images/doggo_destinations_showcase.png)
 
-In the project directory, you can run:
+## Description
 
-### `npm start`
+Doggo Destinations is a demo application of a map social media application that allows users to share their experiences at certain locations around the world. This is especially important for people with pets, and which locations are pet friendly and which are not. People can register, and log in to see other users' locations, as well as their own. Users have features such as the ability to drop a pin on the map, and fill out a popup form with a title, description, and a rating system for the location. Doggo Destinations is also mobile friendly. 
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+## Set up and Installation
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+```bash
+-- Frontend --
+npx create-react-app project-name
+npm add react-map-gl
+npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
+npm install axios
+npm install cors
+npm install timeago.js
 
-### `npm test`
+--Backend--
+npm i mongoose
+npm i express
+npm i nodemond
+npm i bcrypt
+npm i cors
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+```
+- Mapbox is a Javascript library for vector mapping on the web.
+- React-map-gl makes Mapbox a fully controlled reactive component.
+- Axios is used for making API requests
+- Timeago is a react dependency used for tracking time
+- Mui is a React component library of UI tools. Mui/Icons must be installed separately. 
 
-### `npm run build`
+## :globe_with_meridians: API
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+This is the monolith application that contains both the frontend and the backend. The frontend uses React, and the backend uses Mongoose and  Express.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+## :bookmark_tabs: Features
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+- Ability to drop pins containing information pertinent to users' experience at the location.
+- Ability to view other users' pins and info at other locations.
 
-### `npm run eject`
+## :pushpin: Future plans
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+- Users will be able to drop pins that contain photos.
+- Users will be able to edit pins.
+- Users will have more fields, such as photo.
+- Users will be able to comment on other users' pins.
+- "Filter items by" functionality.
+- Adding and deleting comments.
+- Notification system with app alerts
+- Include a landing page.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+---
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+## Credits
+### Front-end
+Anthony Connell ([github](https://github.com/AnthonyConnell))
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+Deanna Ireland ([github](https://github.com/Typerfish))
 
-## Learn More
+### Back-end
+Jennika Wilson ([github](https://github.com/Justanthr))
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+Jacob Lamb ([github](https://github.com/jdlamb4))
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+Map used from  [Mapbox](mapbox.com)
 
-### Code Splitting
+---
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+## License
 
-### Analyzing the Bundle Size
+MIT License
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+Copyright (c) 2022 Doggo Destinations
 
-### Making a Progressive Web App
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
 
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.

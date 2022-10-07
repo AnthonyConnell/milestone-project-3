@@ -3,7 +3,7 @@
     height: 200px;
     padding: 20px;
     border-radius: 10px;
-    background-color: white;
+    background-color: rgb(245, 255, 255);
     position: absolute;
     top: 0;
     bottom: 0;
@@ -24,15 +24,19 @@
   }
   
   .logoLogin {
+    font-family: 'Edu SA Beginner', cursive;
     display: flex;
     align-items: center;
     justify-content: center;
-    color: teal;
+    color: rgb(230, 187, 254 );
     font-weight: 700;
   }
   
   .loginBtn {
+    font-family: 'Edu SA Beginner', cursive;
+    font-size: 20px;
     border: none;
+    border-radius: 8px;
     padding: 5px;
     background-color: rgb(147, 217, 164);
     color: white;

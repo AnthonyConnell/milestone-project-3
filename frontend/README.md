@@ -1,4 +1,4 @@
-![doggo destinations logo](/src/images/DD_Logo.png)
+![doggo destinations logo](./src/images/DD_Logo.png)
 # Doggo Destinations
 
 ---

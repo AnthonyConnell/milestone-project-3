@@ -109,10 +109,10 @@
   }
   
   .login{
-    background-color: teal;
+    background-color: rgb(230, 187, 254 );
     margin-right: 10px;
   }
   
   .register{
-    background-color: slateblue;
+    background-color: rgb(245, 255, 255);
   }

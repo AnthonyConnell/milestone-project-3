@@ -34,7 +34,9 @@
   
   .loginBtn {
     font-family: 'Edu SA Beginner', cursive;
+    font-size: 20px;
     border: none;
+    border-radius: 8px;
     padding: 5px;
     background-color: rgb(147, 217, 164);
     color: white;

@@ -34,7 +34,7 @@
   .registerBtn {
     border: none;
     padding: 5px;
-    background-color: slateblue;
+    background-color: rgb(147, 217, 164);
     color: white;
     cursor: pointer;
   }

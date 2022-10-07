@@ -1,18 +1,5 @@
-/* .card {
-    background-color: 245, 203, 222;
-    width: 250px;
-    height: 250px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-    width: max-content;
-    color: tomato;
-    font-size: 13px;
-    border-bottom: 0.5px solid tomato;
-    margin: 3px 0;
-} */
-
 .card {
+    font-family: 'Edu SA Beginner', cursive;
     width: 250px;
     height: 250px;
     display: flex;
@@ -21,6 +8,7 @@
   }
   
   label {
+    font-family: 'Edu SA Beginner', cursive;
     width: max-content;
     color: rgb(41, 0, 64 );
     font-size: 13px;
@@ -29,6 +17,7 @@
   }
   
   .desc {
+    font-family: 'Edu SA Beginner', cursive;
     font-size: 14px;
   }
   
@@ -37,14 +26,17 @@
   }
   
   .username {
+    font-family: 'Edu SA Beginner', cursive;
     font-size: 14px;
   }
   
   .date {
+    font-family: 'Edu SA Beginner', cursive;
     font-size: 12px;
   }
   
   form {
+    font-family: 'Edu SA Beginner', cursive;
     width: 250px;
     height: 250px;
     display: flex;
@@ -76,6 +68,7 @@
   }
   
   .submitButton {
+    font-family: 'Edu SA Beginner', cursive;
     border: none;
     padding: 5px;
     border-radius: 5px;
@@ -86,6 +79,7 @@
   
   .buttons,
   .logout {
+    font-family: 'Edu SA Beginner', cursive;
     position: absolute;
     top: 10px;
     right: 10px;

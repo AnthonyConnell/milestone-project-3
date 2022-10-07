@@ -24,6 +24,7 @@
   }
   
   .logoRegister {
+    font-family: 'Edu SA Beginner', cursive;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -32,6 +33,7 @@
   }
   
   .registerBtn {
+    font-family: 'Edu SA Beginner', cursive;
     border: none;
     padding: 5px;
     background-color: rgb(147, 217, 164);

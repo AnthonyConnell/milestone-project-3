@@ -109,10 +109,12 @@
   }
   
   .login{
+    font-family: 'Edu SA Beginner', cursive;
     background-color: rgb(230, 187, 254 );
     margin-right: 10px;
   }
   
   .register{
-    background-color: rgb(245, 255, 255);
+    font-family: 'Edu SA Beginner', cursive;
+    background-color: rgb(132, 222, 253 );
   }

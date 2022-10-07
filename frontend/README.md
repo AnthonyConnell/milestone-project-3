@@ -3,7 +3,7 @@
 
 ---
 
-![app demo](/src/images/doggo_destinations_showcase.png)
+![app demo](./src/images/doggo_destinations_showcase.png)
 
 ## Description
 

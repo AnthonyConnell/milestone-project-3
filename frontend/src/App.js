@@ -54,7 +54,7 @@ function App() {
     };
 
     try {
-      const res = await axios.post("http://localhost:5500/pins", newPin);
+      const res = await axios.post("http://54.173.161.116:8080/pins", newPin);
       setPins([...pins, res.data]);
       setNewPlace(null);
     } catch (err) {
@@ -65,7 +65,7 @@ function App() {
   useEffect(() => {
     const getPins = async () => {
       try {
-        const allPins = await axios.get("http://localhost:5500/pins");
+        const allPins = await axios.get("http://54.173.161.116:8080/pins");
         console.log(allPins.data);
         setPins(allPins.data);
       } catch (err) {

@@ -7,6 +7,8 @@ import axios from "axios";
 import { format } from "timeago.js";
 import Register from "./components/Register";
 import Login from "./components/Login";
+import mapboxgl from 'mapbox-gl';
+mapboxgl.workerClass = require('worker-loader!mapbox-gl/dist/mapbox-gl-csp-worker').default; // eslint-disable-line
 
 function App() {
   const  myStorage = window.localStorage;
@@ -16,7 +18,7 @@ function App() {
   const [newPlace, setNewPlace] = useState(null);
   const [title, setTitle] = useState(null);
   const [desc, setDesc] = useState(null);
-  // const [rating, setRating] = useState(0);
+  const [rating, setRating] = useState(0);
   const [showRegister, setShowRegister] = useState(false);
   const [showLogin, setShowLogin] = useState(false);
   const [star, setStar] = useState(0);
@@ -52,7 +54,7 @@ function App() {
     };
 
     try {
-      const res = await axios.post("http://54.173.161.116:8080/pins", newPin);
+      const res = await axios.post("http://localhost:5500/pins", newPin);
       setPins([...pins, res.data]);
       setNewPlace(null);
     } catch (err) {
@@ -63,7 +65,7 @@ function App() {
   useEffect(() => {
     const getPins = async () => {
       try {
-        const allPins = await axios.get("http://54.173.161.116:8080/pins");
+        const allPins = await axios.get("http://localhost:5500/pins");
         console.log(allPins.data);
         setPins(allPins.data);
       } catch (err) {
@@ -125,11 +127,7 @@ function App() {
                 <p className="desc">{p.desc}</p>
                 <label>Rating</label>
                 <div className="stars">
-                <Star className="star" />
-                <Star className="star" />
-                <Star className="star" />
-                <Star className="star" />
-                <Star className="star" />
+                {Array(p.rating).fill(<Star className="star" />)}
                 </div>
                 <label>Information</label>
                 <span className="username">

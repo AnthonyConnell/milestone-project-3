@@ -52,20 +52,20 @@ function App() {
       lat: newPlace.lat,
       long: newPlace.long,
     };
-
+// "http://54.173.161.116:8080/pins"
     try {
-      const res = await axios.post("http://54.173.161.116:8080/pins", newPin);
+      const res = await axios.post("/pins", newPin);
       setPins([...pins, res.data]);
       setNewPlace(null);
     } catch (err) {
       console.log(err);
     }
   };
-
+// "http://54.173.161.116:8080/pins"
   useEffect(() => {
     const getPins = async () => {
       try {
-        const allPins = await axios.get("http://54.173.161.116:8080/pins");
+        const allPins = await axios.get("/pins");
         console.log(allPins.data);
         setPins(allPins.data);
       } catch (err) {

@@ -41,6 +41,6 @@ app.use("/locations", locationRoute);
 app.use("/reviews", reviewRoute);
 
 //creating app
-app.listen(5500, () => {
+app.listen(8080, () => {
     console.log('backend is running')
 });

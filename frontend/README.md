@@ -19,6 +19,7 @@ npm install @mui/icons-material @mui/material @emotion/styled @emotion/react
 npm install axios
 npm install cors
 npm install timeago.js
+npm i worker-loader
 
 --Backend--
 npm i mongoose
@@ -66,6 +67,8 @@ Deanna Ireland ([github](https://github.com/Typerfish))
 Jennika Wilson ([github](https://github.com/Justanthr))
 
 Jacob Lamb ([github](https://github.com/jdlamb4))
+
+--
 
 Map used from  [Mapbox](mapbox.com)
 

@@ -26,7 +26,7 @@ export default function Register({setShowRegister}) {
         };
 
         try {
-            await axios.post("http://54.173.161.116:8080/users/register", newUser);
+            await axios.post("/users/register", newUser);
             setError(false);
             setSuccess(true);
         } catch (err) {
